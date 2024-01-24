@@ -51,7 +51,7 @@ class Rectangle:
     rotate_outer_width = self.height
     rotate_outer_height = self.width
     outer_height = self.height
-    result = self._get_amount_inside(outer_width,outer_height,inner_width,inner_height) +       self._get_amount_inside((outer_height % inner_height),outer_width,inner_width,inner_height) + self._get_amount_inside(outer_height,outer_width % inner_width,inner_width,inner_height)
+    result = self._get_amount_inside(outer_width,outer_height,inner_width,inner_height) + self._get_amount_inside((outer_height % inner_height),outer_width,inner_width,inner_height) + self._get_amount_inside(outer_height,outer_width % inner_width,inner_width,inner_height)
     result_rotate = self._get_amount_inside(rotate_outer_width,rotate_outer_height,inner_width,inner_height) + self._get_amount_inside((rotate_outer_height % inner_height),rotate_outer_width,inner_width,inner_height) + self._get_amount_inside(rotate_outer_height,rotate_outer_width % inner_width,inner_width,inner_height)
     
     return max([result,result_rotate])

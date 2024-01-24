@@ -68,8 +68,6 @@ class Rectangle:
       return n 
 
 
-
-
 class Square(Rectangle):
   def __init__(self,side):
     self.side = side
